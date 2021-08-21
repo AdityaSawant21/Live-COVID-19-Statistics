@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "covid19-stats-5c517",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

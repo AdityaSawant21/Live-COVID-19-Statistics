@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19 Statistics</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- start of web manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- end of web manifest -->
+</head>
+
+<body>
+    <header class="bg-blue-200">
+        <div class="modal menuToggle">
+            <ul class="bg-blue-800">
+                <li class="text-red-500 font-bold"><a href="about.html">About Covid19</a></li>
+                <li class="text-red-500 font-bold"><a href="prevention.html">Prevention</a></li>
+                <li class="text-red-500 font-bold"><a href="news.html">Latest News</a></li>
+                <li class="text-red-500 font-bold myth"><a href="myth.html">Myth Busters</a></li>
+                <li class="text-red-500 font-bold myth"><a href="demo.html">Demos</a></li>
+                <li class="text-red-500 font-bold shareOnWeb"><a class="share-button">Share Website</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="navMenu">
+                <img src="https://img.icons8.com/bubbles/50/000000/coronavirus.png" />
+                <div class="menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="far fa-window-close menuToggle"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-blue-800 p-5 text-center modalCountry rounded-lg text-white" tabindex="0">
+            <div class="facts">
+                <div class="aboutCountry">
+                    <div class="countryFacts1 pb-4 mb-4">
+                        <h1 class="font-bold text-center text-xl text-red-400">Country: </h1>
+                        <h2 class="capitalCity">Capital City:</h2>
+                        <h2 class="countryPopulation"></h2>
+                        <h2 class="region">Region: </h2>
+                    </div>
+                    <img class="countryFlag" src="" alt="">
+                </div>
+                <div class="caseStatistics">
+                    <p class="p-4 bg-indigo-400 rounded">
+                        <span class="totalConfirmedCases">Total Confirmed Cases:</span> <br>
+                        <span class="newConfirmedCases">New Confirmed cases:</span>
+                    </p>
+
+                    <p class="p-4 bg-indigo-700 rounded text-red-500">
+                        <span class="totalDeathsCases">Total Deaths Cases:</span> <br>
+                        <span class="newDeathsCases">New Deaths cases:</span>
+                    </p>
+                    <p class="p-4 mb-10 bg-indigo-400 rounded">
+                        <span class="totalRecoveredCases">Total Recovered Cases: </span> <br>
+                        <span class="newRecoveredCases"> New Recovered cases:</span>
+                    </p>
+                </div>
+            </div>
+            <button class="btnTop bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-8 rounded">
+                Back
+            </button>
+        </div>
+
+    </header>
+    <main class="bg-blue-900" id="topSection">
+        <h1 class="text-xl text-white font-bold">Covid19 Statistics 2020</h1>
+        <h3 class="dateTaken mt-4 mb-4 text-white">Data extracted at </h3>
+        <h3 class="font-bold text-xl text-white">Current Global Statistics</h3>
+        <div class="dataWrapper bg-blue-710">
+            <div class="bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">
+                <label for="newConfirmed" class="text-white">New Confirmed</label>
+                <h4 class="newConfirmed text-white font-bold"></h4>
+            </div>
+
+            <div class="text-red-900 font-bold bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">New Deaths
+                <label></label>
+                <h4 class="newDeath"></h4>
+            </div>
+
+            <div class="bg-blue-600 hover:bg-700-blue text-center text-white p-2 card rounded">New Recovered
+                <label></label>
+                <h4 class="newRecovered"></h4>
+            </div>
+
+            <div class="bg-blue-600 hover:bg-700-blue text-center p-2 text-white card rounded">Total Confirmed
+                <label></label>
+                <h4 class="totalConfirmed"></h4>
+            </div>
+
+            <div class="text-red-900 font-bold bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">Total Deaths
+                <label></label>
+                <h4 class="totalDeath"></h4>
+            </div>
+
+            <div class="bg-blue-600 hover:bg-700-blue text-white font-bold text-center p-2 card rounded">
+                <label></label>
+                Total Recovered
+                <h4 class="totalRecovered"></h4>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-center text-xl m-12 font-bold text-white font-awesome">Country by country Statistics</h3>
+            <label for="countrySearch" class="searchBy">
+                <span class="countryLabel text-white text-center mb-8">Search by country: </span>
+                <input type="search" placeholder="Zimbabwe" name="" id="countrySearch"
+                    class="block rounded shadow-sm p-2 text-center text-lg text-blue-500">
+            </label>
+
+        </div>
+
+
+        <div class="countryState">
+
+        </div>
+
+    </main>
+
+    <footer class="bg-blue-800 text-center text-lg mt-20 pt-10 pb-10">
+        <h4 class="text-white">Created by C. Mutezva &copy; 2020</h4>
+    </footer>
+
+    <script src="main.js"></script>
+    <!--Website sharing -->
+    <script src="./scripts/webShare.js"></script>
+    <!-- register service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('SW registered with scope:', registration.scope);
+                    })
+                    .catch(err => {
+                        console.error('Registration failed:', err);
+                    });
+            });
+        }
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
